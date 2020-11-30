@@ -20,21 +20,24 @@ template. The cookiecutter will ask several questions, such as MLCube name and a
 > Do not use `~/mlcube` directory. It is used by the MLCube runtime as a default cache directory and storage location.
 > For instance, by default, MLCube stores singularity containers here.
 ```
-mkdir -p ~/mlcube_projects && cd ~/mlcube_projects 
-cookiecutter https://github.com/mlcommons/mlcube_cookiecutter.git
+$ mkdir -p ~/mlcube_projects && cd ~/mlcube_projects 
+$ cookiecutter https://github.com/mlcommons/mlcube_cookiecutter.git
+mlcube_name [my_mlcube]:
+mlcube_author [mlcube_author]:
 ```
  
 ## Running MLCubes
 The MLCube template project that has just been created provides an example implementation of a task that MLCube runners
 can run. Assuming your MLCube name is `my_mlcube`, configure and run it using docker container runtime:
 ```
-cd ./my_mlcube && ls ./workspace
+$ cd ./my_mlcube && ls ./workspace
+parameters_file.yaml
+$ mlcube_docker configure --mlcube=. --platform=platforms/docker.yaml
+$ mlcube_docker run --mlcube=. --platform=platforms/docker.yaml --task=run/my_mlcube.yaml
 
-mlcube_docker configure --mlcube=. --platform=platforms/docker.yaml
-mlcube_docker run --mlcube=. --platform=platforms/docker.yaml --task=run/example_task.yaml
-
-ls ./workspace
-cat ./workspace/output.txt 
+$ ls ./workspace
+output.txt           parameters_file.yaml
+$ cat ./workspace/output.txt 
 ```
 
 ## Distributing ML workloads as MLCubes. 
