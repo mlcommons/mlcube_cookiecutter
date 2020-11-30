@@ -24,4 +24,4 @@ mlcube_spec_version: 0.1.0
 # appropriately.
 # NEXT: study `tasks/example_task.yaml`.
 tasks:
-  - tasks/example_task.yaml
+  - tasks/{{cookiecutter.mlcube_name}}.yaml

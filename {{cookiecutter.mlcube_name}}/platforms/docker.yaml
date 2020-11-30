@@ -12,4 +12,4 @@ platform:
   name: "docker"
   version: ">=18.01"
 container:
-  image: "mlcube_{{cookiecutter.mlcube_name}}:0.0.1"
+  image: "mlcube/{{cookiecutter.mlcube_name}}:0.0.1"
