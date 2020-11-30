@@ -6,7 +6,7 @@ schema_type: mlcube_root
 
 # MLCube name (string). Replace it with your MLCube name (e.g. "MNIST").
 name: {{cookiecutter.mlcube_name}}
-# MLCube author (string). Replace it with your MLCube name (e.g. "MLPerf Best Practices Working Group").
+# MLCube author (string). Replace it with your MLCube name (e.g. "MLCommons Best Practices Working Group").
 author: {{cookiecutter.mlcube_author}}
 
 version: 0.1.0
