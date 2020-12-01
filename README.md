@@ -6,6 +6,8 @@ description of MLCubes can be found [here](https://mlcommons.github.io/mlcube/).
 Currently, the MLCube supports docker- and singularity-based cubes. The cookiecutter template comes with docker
 configuration files.  
 
+[![asciicast](getting-started.gif)](https://asciinema.org/a/Mnl0Kh9uNZWD9Y6MkgQewheeP)
+
 ## Initialize python environment
 - Install [cookiecutter](https://pypi.org/project/cookiecutter/) for creating MLCubes from templates.
 - Install [mlcube-docker](https://pypi.org/project/mlcube-docker/) for running docker-based cubes.
