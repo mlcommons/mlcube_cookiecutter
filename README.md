@@ -24,8 +24,12 @@ template. The cookiecutter will ask several questions, such as MLCube name and a
 ```
 $ mkdir -p ~/mlcube_projects && cd ~/mlcube_projects 
 $ cookiecutter https://github.com/mlcommons/mlcube_cookiecutter.git
+
 mlcube_name [my_mlcube]:
-mlcube_author [mlcube_author]:
+mlcube_description [my_mlcube_description]:
+author_name [mlcube_author_name]:
+author_email [mlcube_author_email]:
+author_org [mlcube_author_org]:
 ```
  
 ## Running MLCubes
@@ -34,12 +38,15 @@ can run. Assuming your MLCube name is `my_mlcube`, configure and run it using do
 ```
 $ cd ./my_mlcube && ls ./workspace
 parameters_file.yaml
-$ mlcube_docker configure --mlcube=. --platform=platforms/docker.yaml
-$ mlcube_docker run --mlcube=. --platform=platforms/docker.yaml --task=run/my_mlcube.yaml
+
+$ mlcube configure --mlcube=. --platform=docker -Prunner.build_strategy=auto
+$ mlcube run --mlcube=. --platform=docker --task=my_mlcube
 
 $ ls ./workspace
 output.txt           parameters_file.yaml
+
 $ cat ./workspace/output.txt 
+Running my_mlcube task with parameters '{'abc': 123}'.
 ```
 
 ## Distributing ML workloads as MLCubes. 
