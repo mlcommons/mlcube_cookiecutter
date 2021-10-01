@@ -28,7 +28,7 @@ def {{cookiecutter.mlcube_name}}(task_args: List[str]) -> None:
     
 
 def main():
-    # Every MLCuber runner passes a task name as the first argument. Other arguments are task-specific.
+    # Every MLCube runner passes a task name as the first argument. Other arguments are task-specific.
     parser = argparse.ArgumentParser()
     parser.add_argument('mlcube_task', type=str, help="Task for this MLCube.")
 

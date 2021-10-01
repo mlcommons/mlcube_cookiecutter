@@ -1,4 +1,8 @@
 {
   "mlcube_name": "my_mlcube",
-  "mlcube_author": "mlcube_author"
+  "mlcube_description": "my_mlcube_description",
+
+  "author_name": "mlcube_author_name",
+  "author_email": "mlcube_author_email",
+  "author_org": "mlcube_author_org"
 }
