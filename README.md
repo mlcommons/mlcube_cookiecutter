@@ -1,5 +1,5 @@
 # MLCube Project Template
-This repository provides a cookiecutter-based template for [MLCommons](https://mlcommons.org/) MLCubes. A detailed
+This repository provides a cookiecutter-based template for [MLCommons](https://mlcommons.org/) MLCube&reg;. A detailed
 description of MLCubes can be found [here](https://mlcommons.github.io/mlcube/). 
 
 ## Prerequisites
